@@ -2,10 +2,8 @@ PATH
   remote: .
   specs:
     multitenancy (0.0.1)
-      capybara (~> 2.3)
       haml-rails
       rails (~> 4.2.1)
-      rspec-rails (~> 3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -148,5 +146,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara (~> 2.3)
   multitenancy!
+  rspec-rails (~> 3.0)
   sqlite3
