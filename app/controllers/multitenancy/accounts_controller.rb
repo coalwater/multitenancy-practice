@@ -4,6 +4,7 @@ module Multitenancy
   class AccountsController < ApplicationController
     def new
       @account = Account.new
+      @account.build_owner
     end
     def create
       Account.create(accounts_params)
@@ -11,7 +12,7 @@ module Multitenancy
     end
 
     def accounts_params
-      params.require(:account).permit(:name)
+      params.require(:account).permit(:name, owner_attributes: [:name, :email, :password])
     end
   end
 end

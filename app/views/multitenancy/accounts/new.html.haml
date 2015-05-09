@@ -1,6 +1,13 @@
 %h1
   Homepage#index
 = form_for(@account) do |f|
-  = f.label :name
+  = f.label :name, 'Account Name'
   = f.text_field :name
+  = f.fields_for :owner do |a|
+    = a.label :name, 'Owner Name'
+    = a.text_field :name
+    = a.label :email, 'Owner Email'
+    = a.text_field :email
+    = a.label :password, 'Owner Password'
+    = a.password_field :password
   = f.submit

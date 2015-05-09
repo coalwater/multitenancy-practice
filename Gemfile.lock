@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     multitenancy (0.0.1)
+      bcrypt (~> 3.1.9)
       haml-rails
       rails (~> 4.2.1)
 
@@ -45,6 +46,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.0)
+    bcrypt (3.1.9)
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
